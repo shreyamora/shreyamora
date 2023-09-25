@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Calculator Project</title>
+	<style >
+		.title{
+			margin-bottom: 10px;
+			text-align: center;
+			width: 210px;
+			color: blue;
+			border:  solid black 2px;
+		}
+		input[type="button"]{
+			background-color: black;
+			color:  white;
+			border:  solid black 2px;
+			width: 100%;
+		}
+		input[type='text']{
+			background-color: white;
+			border:  solid black 2px;
+			width: 100%;
+		}
+	</style>
+</head>
+<body>
+<div class="title">Shreya's Calculator</div>
+<table border="0">
+	<tr>
+		<td colspan="3"><input type ="text" id="result"></td>
+		<td><input type="button" value="c" onclick="clr()"></td>
+	</tr>
+	<tr>
+		<td><input type="button" value="1" onclick="dispaly('1')"></td>
+		<td><input type="button" value="2" onclick="dispaly('2')"></td>
+		<td><input type="button" value="3" onclick="dispaly('3')"></td>
+		<td><input type="button" value="/" onclick="dispaly('/')"></td>
+	</tr>
+	<tr>
+		<td><input type="button" value="4" onclick="dispaly('4')"></td>
+		<td><input type="button" value="5" onclick="dispaly('5')"></td>
+		<td><input type="button" value="6" onclick="dispaly('6')"></td>
+		<td><input type="button" value="-" onclick="dispaly('-')"></td>
+	</tr>
+	<tr>
+		<td><input type="button" value="7" onclick="dispaly('7')"></td>
+		<td><input type="button" value="8" onclick="dispaly('8')"></td>
+		<td><input type="button" value="9" onclick="dispaly('9')"></td>
+		<td><input type="button" value="+" onclick="dispaly('+')"></td>
+	</tr>
+	<tr>
+		<td><input type="button" value="." onclick="dispaly('.')"></td>
+		<td><input type="button" value="0" onclick="dispaly('0')"></td>
+		<td><input type="button" value="=" onclick="equate()"></td>
+		<td><input type="button" value="*" onclick="dispaly('*')"></td>
+	</tr>
+</table>
+<script type="text/javascript">
+	function clr(){
+		document.getElementById("result").value="";
+
+	} 
+	function dispaly(val){
+		document.getElementById("result").value+=val;
+
+	}
+	function equate(){
+		let x= document.getElementById("result").value;
+		let y= eval(x);
+		document.getElementById("result").value=y;
+
+	}
+	
+</script>
+</body>
+</html>
